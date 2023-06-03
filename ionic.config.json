@@ -1,0 +1,7 @@
+{
+  "name": "reservas-ud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
