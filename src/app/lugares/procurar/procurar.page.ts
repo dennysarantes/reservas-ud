@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LugaresModel } from '../model/lugares.model';
+import { LugaresService } from '../lugares.service';
 
 @Component({
   selector: 'app-procurar',
@@ -7,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProcurarPage implements OnInit {
 
-  constructor() { }
+  lugaresCarregados: LugaresModel[]=[];
+
+  constructor(private lugaresService:LugaresService) { }
 
   ngOnInit() {
-    console.log('procurar iniciado');
+    this.lugaresCarregados = this.lugaresService.lugares;
   }
 
 }
