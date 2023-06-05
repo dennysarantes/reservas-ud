@@ -1,9 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Procurar</ion-title>
+    <ion-title>Descubra lugares fanstásticos!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" sizeLg="6" sizeMd="6" offsetSm="2" class="ion-text-center">
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>{{lugaresCarregados[0].titulo}}</ion-card-title>
+                    <ion-card-subtitle>{{lugaresCarregados[0].preco | currency : 'BRL'}}</ion-card-subtitle>
+                </ion-card-header>
+                <ion-img [src]="lugaresCarregados[0].imagemUrl"></ion-img>
+                <ion-card-content>
+                  <p>{{lugaresCarregados[0].descricao}}</p>
+                </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" sizeLg="6" sizeMd="6" offsetSm="2" class="ion-text-center">
+            <ion-list>
+              <ion-item  *ngFor="let lugar of lugaresCarregados.slice(1)">
+                <ion-thumbnail slot="start">
+                      <ion-img [src]="lugar.imagemUrl"></ion-img>
+                </ion-thumbnail>
+                <ion-label>
+                    <h2>{{lugar.titulo}}</h2>
+                    <p>{{lugar.descricao}}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 </ion-content>
