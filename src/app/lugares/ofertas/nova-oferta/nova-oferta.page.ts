@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-nova-oferta',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovaOfertaPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController ){}
 
-  ngOnInit() {
+  public botoesAlerta = [
+    {
+      text: 'Cancelar',
+      role: 'cancel',
+      handler: () => {}
+    },
+    {
+      text: 'Sim',
+      role: 'confirm',
+      handler: () => {
+        this.irParaOfertasPage();
+      },
+    },
+  ];
+
+  ngOnInit() {}
+
+  irParaOfertasPage(){
+    this.navCtrl.navigateBack('/lugares/tabs/ofertas');
   }
 
 }

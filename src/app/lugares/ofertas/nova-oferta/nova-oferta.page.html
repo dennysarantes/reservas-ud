@@ -1,13 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>nova-oferta</ion-title>
-  </ion-toolbar>
+    <ion-title>Cadastrar nova oferta</ion-title>
+  <ion-buttons slot="start">
+      <ion-button id="triggerVoltar">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+      <ion-icon color="primary" name="save" slot="icon-only" ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">nova-oferta</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-alert
+  trigger="triggerVoltar"
+  header="Atenção!"
+  subHeader="Sair do cadastro?"
+  [buttons]="botoesAlerta"
+  (didDismiss)="($event)"
+></ion-alert>
 </ion-content>

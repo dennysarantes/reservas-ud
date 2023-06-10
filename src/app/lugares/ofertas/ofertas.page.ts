@@ -1,4 +1,7 @@
+import { OfertaService } from './helper/oferta.service';
 import { Component, OnInit } from '@angular/core';
+import { LugaresModel } from '../model/lugares.model';
+import { HelperLugares } from '../model/helper-lugares';
 
 @Component({
   selector: 'app-ofertas',
@@ -7,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfertasPage implements OnInit {
 
-  constructor() { }
+  ofertasCarregadas: LugaresModel[] =[]
+
+  constructor(private ofertaService:OfertaService) { }
 
   ngOnInit() {
-    console.log('ofertas iniciado...');
+    this.ofertasCarregadas = [...this.ofertaService.ofertas];
   }
 
 }
