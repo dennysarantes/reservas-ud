@@ -5,9 +5,10 @@ import { ReservasOfertasPage } from './reservas-ofertas.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path:':ofertaId',
     component: ReservasOfertasPage
-  }
+  },
+
 ];
 
 @NgModule({

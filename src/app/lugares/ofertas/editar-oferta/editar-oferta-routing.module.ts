@@ -5,7 +5,7 @@ import { EditarOfertaPage } from './editar-oferta.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':ofertaId',
     component: EditarOfertaPage
   }
 ];

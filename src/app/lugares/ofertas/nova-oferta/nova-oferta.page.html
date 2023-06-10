@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Cadastrar nova oferta</ion-title>
   <ion-buttons slot="start">
-      <ion-button id="voltar">
+      <ion-button id="triggerVoltar">
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
       <ion-button>
@@ -14,7 +14,7 @@
 <ion-content [fullscreen]="true">
 
   <ion-alert
-  trigger="voltar"
+  trigger="triggerVoltar"
   header="Atenção!"
   subHeader="Sair do cadastro?"
   [buttons]="botoesAlerta"
