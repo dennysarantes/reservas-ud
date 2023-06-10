@@ -10,7 +10,6 @@ export class OfertasPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('ofertas iniciado...');
   }
 
 }
