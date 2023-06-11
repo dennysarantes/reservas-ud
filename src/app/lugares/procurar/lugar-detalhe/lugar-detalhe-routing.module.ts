@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LugarDetalhePage } from './lugar-detalhe.page';
+import { HelperLugares } from '../../model/helper-lugares';
+import { LugaresService } from '../../lugares.service';
 
 const routes: Routes = [
   {
@@ -10,7 +12,10 @@ const routes: Routes = [
   },
   {
     path: ':lugarId',
-    component:LugarDetalhePage
+    component:LugarDetalhePage,
+    resolve: {
+      lugarDetalhes: LugaresService
+    }
   }
 
 ];

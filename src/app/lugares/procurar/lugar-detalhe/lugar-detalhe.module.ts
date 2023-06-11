@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LugarDetalhePageRoutingModule } from './lugar-detalhe-routing.module';
 
 import { LugarDetalhePage } from './lugar-detalhe.page';
+import { FazerReservaComponent } from '../modal/fazer-reserva/fazer-reserva.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { LugarDetalhePage } from './lugar-detalhe.page';
     IonicModule,
     LugarDetalhePageRoutingModule
   ],
-  declarations: [LugarDetalhePage]
+  declarations: [LugarDetalhePage, FazerReservaComponent],
 })
 export class LugarDetalhePageModule {}
