@@ -1,4 +1,8 @@
+import { ActivatedRoute, ActivatedRouteSnapshot, Resolve } from "@angular/router";
 import { LugaresModel } from "./lugares.model"
+import { inject } from "@angular/core";
+import { LugaresService } from "../lugares.service";
+import { Observable } from "rxjs";
 
 const getLugaresDefault = () => {
   const lugar1 = new LugaresModel(
@@ -29,8 +33,6 @@ const getLugaresDefault = () => {
 
 
 
-
-
 export const HelperLugares = {
-getLugaresDefault
+getLugaresDefault,
 }
