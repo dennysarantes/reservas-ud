@@ -18,4 +18,8 @@ export class OfertasPage implements OnInit {
     this.ofertasCarregadas = [...this.ofertaService.ofertas];
   }
 
+  editar(id:string){
+    console.log("id: ", id);
+  }
+
 }
