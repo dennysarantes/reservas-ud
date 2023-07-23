@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  _usuarioEstaAutenticado = true; //TODO: Alterar para false
+  _usuarioEstaAutenticado = false; //TODO: Alterar para false
 
   constructor(private router: Router) {}
 

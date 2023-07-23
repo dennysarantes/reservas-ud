@@ -8,6 +8,16 @@
 </ion-header>
 
 <ion-content>
+  <ion-toolbar>
+  <ion-segment (ionChange)="alterarVisao($event)" value="todos">
+    <ion-segment-button  value="todos">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="disponivel">
+      <ion-label>Disponíveis</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
       <ion-grid>
         <ion-row>
           <ion-col size="12" sizeLg="6" sizeMd="6" offsetSm="2" class="ion-text-center">
@@ -45,6 +55,9 @@
                 </ion-label>
               </ion-item>
             </ion-list>
+            <ion-infinite-scroll>
+              <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
           </ion-col>
         </ion-row>
       </ion-grid>
