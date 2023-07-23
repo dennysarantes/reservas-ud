@@ -1,0 +1,32 @@
+<ion-menu #menu side="start" menuId="menu-principal" contentId="conteudo-principal">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>DennysBnB</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-list lines="none">
+        <ion-item (click)="navegar('procurar')">
+          <ion-icon name="business" slot="start"></ion-icon>
+          <ion-title >Encontre lugares</ion-title>
+        </ion-item>
+        <ion-item (click)="navegar('ofertas')">
+          <ion-icon name="bed-outline" slot="start"></ion-icon>
+          <ion-title>Minhas ofertas</ion-title>
+        </ion-item>
+        <ion-menu-toggle>
+          <ion-item routerLink="/reservas-usuario">
+            <ion-icon name="checkmark-done-outline" slot="start"></ion-icon>
+            <ion-title>Minhas reservas</ion-title>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+        <ion-item (click)="logout()">
+          <ion-icon name="exit" slot="start"></ion-icon>
+          <ion-title>Logout</ion-title>
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+  </ion-content>
+</ion-menu>

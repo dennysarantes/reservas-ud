@@ -1,0 +1,13 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/lugares/tabs/ofertas"></ion-back-button>
+    <ion-title size="small" >{{ofertaCarregada?.titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-button
+      class="ion-margin"
+      [routerLink]="['/', 'lugares', 'tabs', 'ofertas', 'editar-oferta', ofertaCarregada?.id]"
+    >Editar</ion-button>
+</ion-content>

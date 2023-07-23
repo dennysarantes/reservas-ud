@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        {{lugarSelecionado?.titulo}}
+    </ion-title>
+    <ion-buttons slot="primary" (click)="cancelar()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-text-center ion-padding">
+    <p>{{lugarSelecionado?.descricao}}</p>
+    <p>Você está quase lá!!</p>
+    <span>Inclua os dados de pagamento para finalizar a reservar</span>
+    <p>
+      <ion-button color="primary" (click)="reservarLugar()">É meu!</ion-button>
+    </p>
+</ion-content>
