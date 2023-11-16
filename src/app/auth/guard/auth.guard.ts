@@ -16,22 +16,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthGuard implements CanLoad {
+
   constructor(private authService: AuthService, private router: Router) {}
 
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]
-  ):
+  canLoad(route: Route,segments: UrlSegment[]):
     | boolean
     | UrlTree
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
+
     const usuarioEstaLogado = this.authService.usuario;
+    console.log("usuarioEstaLogado: ", usuarioEstaLogado);
+
     if (!usuarioEstaLogado) {
       this.router.navigateByUrl('/auth');
       return false;
     } else {
       return true;
     }
+
+
   }
 }

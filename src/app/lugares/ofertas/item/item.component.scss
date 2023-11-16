@@ -1,0 +1,9 @@
+.detalhes{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  .espaco-esquerdo{
+    margin-left: 5px;
+  }
+}

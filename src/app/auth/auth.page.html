@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Atenticação</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -20,7 +20,13 @@
         <ion-col size="8">
           <ion-item>
             <!-- <ion-label position="floating">Senha</ion-label> -->
-            <ion-input type="password" maxlength="8" #senha formControlName="senha" [label]="senhaLabel" placeholder="Senha"></ion-input>
+            <ion-input
+                 type="password"
+                 maxlength="8"
+                 #senha
+                 formControlName="senha"
+                 [label]="senhaLabel"
+                 placeholder="Senha"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>

@@ -1,0 +1,22 @@
+<!-- <ion-item  detail (click)="editar(slidingItem, oferta.id)"> -->
+  <ion-item detail>
+  <ion-thumbnail slot="start">
+    <ion-img [src]="oferta?.imagemUrl"></ion-img>
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{oferta?.titulo}}</h2>
+    <div class="detalhes">
+      <div>
+        <ion-text >De: </ion-text>
+        <ion-icon name="calendar-outline" color="secondary"></ion-icon>
+        <ion-text class="espaco-esquerdo">{{getDate() | date}}</ion-text>
+      </div>
+      <div>
+        <ion-text >Até: </ion-text>
+        <ion-icon name="calendar-outline" color="secondary"></ion-icon>
+        <ion-text class="espaco-esquerdo">{{getDate() | date}}</ion-text>
+      </div>
+    </div>
+    <p>{{oferta?.descricao}}</p>
+  </ion-label>
+</ion-item>
