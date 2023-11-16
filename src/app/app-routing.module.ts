@@ -12,7 +12,6 @@ const routes: Routes = [
     redirectTo: 'lugares',
     pathMatch: 'full',
   },
-
   {
     path: 'lugares',
     loadChildren: () =>

@@ -5,7 +5,7 @@ import { ReservasOfertasPage } from './reservas-ofertas.page';
 
 const routes: Routes = [
   {
-    path:':ofertaId',
+    path:'',
     component: ReservasOfertasPage
   },
 

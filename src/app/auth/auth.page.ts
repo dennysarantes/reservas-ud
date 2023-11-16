@@ -52,11 +52,11 @@ export class AuthPage implements OnInit {
       keyboardClose:true,
       message:'Autenticando...'
     }).then((element) => {
-      element.present(); //Responsável por mostrar o componente...
+      element.present(); //Responsável por mostrar o componente de carregamento...
       setTimeout(() => {
         this.authService.login();
-        this.loadingController.dismiss(); // Responsável por esconder o componente...
-      }, 3500);
+        this.loadingController.dismiss(); // Responsável por esconder o componente de carregamento...
+      }, 2500);
     })
 
 

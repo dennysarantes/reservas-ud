@@ -19,6 +19,7 @@ export class ReservasOfertasPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.log('teste...')
     this.actRoute.paramMap.subscribe((p) => {
       if (p.has('ofertaId')) {
         this.ofertaCarregada = this.ofertaService.getOferta(p.get('ofertaId')!);
